@@ -11,10 +11,4 @@
 |
 */
 
-
-$route->get('/', function() use ($app) {
-    return $app->welcome();
-});
-$route->group(['namespace' => 'App\Http\Controllers'], function($group){
-    $group->get('create-products', 'ShopifyController@createProducts');
-});
+$router->get('/', 'ShopifyController@checkUrl');

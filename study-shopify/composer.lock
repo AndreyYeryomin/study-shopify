@@ -124,7 +124,7 @@
         },
         {
             "name": "illuminate/auth",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/auth.git",
@@ -175,7 +175,7 @@
         },
         {
             "name": "illuminate/broadcasting",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/broadcasting.git",
@@ -225,7 +225,7 @@
         },
         {
             "name": "illuminate/bus",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
@@ -270,7 +270,7 @@
         },
         {
             "name": "illuminate/cache",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
@@ -319,7 +319,7 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -363,7 +363,7 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
@@ -413,16 +413,16 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "4a42d667a05ec6d31f05b532cdac7e8e68e5ea2a"
+                "reference": "1a29b314dd5c7a5a5bce3dd7b9da924cc1ec22ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/4a42d667a05ec6d31f05b532cdac7e8e68e5ea2a",
-                "reference": "4a42d667a05ec6d31f05b532cdac7e8e68e5ea2a",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/1a29b314dd5c7a5a5bce3dd7b9da924cc1ec22ec",
+                "reference": "1a29b314dd5c7a5a5bce3dd7b9da924cc1ec22ec",
                 "shasum": ""
             },
             "require": {
@@ -453,20 +453,20 @@
             ],
             "description": "The Illuminate Container package.",
             "homepage": "https://laravel.com",
-            "time": "2018-01-21T02:13:38+00:00"
+            "time": "2018-05-14T12:49:42+00:00"
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "6a11fbccbc7da16a85fcd1d4b08e51b5658de0d4"
+                "reference": "3dc639feabe0f302f574157a782ede323881a944"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/6a11fbccbc7da16a85fcd1d4b08e51b5658de0d4",
-                "reference": "6a11fbccbc7da16a85fcd1d4b08e51b5658de0d4",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/3dc639feabe0f302f574157a782ede323881a944",
+                "reference": "3dc639feabe0f302f574157a782ede323881a944",
                 "shasum": ""
             },
             "require": {
@@ -497,20 +497,20 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2018-05-08T13:22:33+00:00"
+            "time": "2018-05-11T23:38:58+00:00"
         },
         {
             "name": "illuminate/database",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "7ab07d133ece8098b6f5f872ec95d080087236c0"
+                "reference": "713d376a2e2b9c7cded8916125c24b7b3adb4984"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/7ab07d133ece8098b6f5f872ec95d080087236c0",
-                "reference": "7ab07d133ece8098b6f5f872ec95d080087236c0",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/713d376a2e2b9c7cded8916125c24b7b3adb4984",
+                "reference": "713d376a2e2b9c7cded8916125c24b7b3adb4984",
                 "shasum": ""
             },
             "require": {
@@ -556,11 +556,11 @@
                 "orm",
                 "sql"
             ],
-            "time": "2018-05-07T14:20:13+00:00"
+            "time": "2018-05-14T22:33:47+00:00"
         },
         {
             "name": "illuminate/encryption",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/encryption.git",
@@ -606,7 +606,7 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -651,7 +651,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -703,16 +703,16 @@
         },
         {
             "name": "illuminate/hashing",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/hashing.git",
-                "reference": "230859eb01c72dfe1d17e0283e27b6720337abb5"
+                "reference": "a7e11986c3e6614f3c407c49190b8f8adc56e434"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/hashing/zipball/230859eb01c72dfe1d17e0283e27b6720337abb5",
-                "reference": "230859eb01c72dfe1d17e0283e27b6720337abb5",
+                "url": "https://api.github.com/repos/illuminate/hashing/zipball/a7e11986c3e6614f3c407c49190b8f8adc56e434",
+                "reference": "a7e11986c3e6614f3c407c49190b8f8adc56e434",
                 "shasum": ""
             },
             "require": {
@@ -743,11 +743,11 @@
             ],
             "description": "The Illuminate Hashing package.",
             "homepage": "https://laravel.com",
-            "time": "2018-03-18T12:58:03+00:00"
+            "time": "2018-05-13T13:27:36+00:00"
         },
         {
             "name": "illuminate/http",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/http.git",
@@ -793,7 +793,7 @@
         },
         {
             "name": "illuminate/log",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/log.git",
@@ -838,7 +838,7 @@
         },
         {
             "name": "illuminate/pagination",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pagination.git",
@@ -882,16 +882,16 @@
         },
         {
             "name": "illuminate/pipeline",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
-                "reference": "0ea9439ed6e4b0bbbc74bf15aab84e4c9a3a9b3b"
+                "reference": "07b12156ad6d429d9f0ea179b2ed1e918372023e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/pipeline/zipball/0ea9439ed6e4b0bbbc74bf15aab84e4c9a3a9b3b",
-                "reference": "0ea9439ed6e4b0bbbc74bf15aab84e4c9a3a9b3b",
+                "url": "https://api.github.com/repos/illuminate/pipeline/zipball/07b12156ad6d429d9f0ea179b2ed1e918372023e",
+                "reference": "07b12156ad6d429d9f0ea179b2ed1e918372023e",
                 "shasum": ""
             },
             "require": {
@@ -922,11 +922,11 @@
             ],
             "description": "The Illuminate Pipeline package.",
             "homepage": "https://laravel.com",
-            "time": "2017-11-07T20:23:51+00:00"
+            "time": "2018-05-14T13:08:37+00:00"
         },
         {
             "name": "illuminate/queue",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/queue.git",
@@ -983,7 +983,7 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -1033,16 +1033,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "6e84d4140310246ace38fdb0909da5b2fb22eadf"
+                "reference": "2ef559ad8840481d5247bd7ebfd04eb37d3f6889"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/6e84d4140310246ace38fdb0909da5b2fb22eadf",
-                "reference": "6e84d4140310246ace38fdb0909da5b2fb22eadf",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/2ef559ad8840481d5247bd7ebfd04eb37d3f6889",
+                "reference": "2ef559ad8840481d5247bd7ebfd04eb37d3f6889",
                 "shasum": ""
             },
             "require": {
@@ -1086,11 +1086,11 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2018-05-07T14:12:37+00:00"
+            "time": "2018-05-12T17:43:47+00:00"
         },
         {
             "name": "illuminate/translation",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
@@ -1135,7 +1135,7 @@
         },
         {
             "name": "illuminate/validation",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/validation.git",
@@ -1185,7 +1185,7 @@
         },
         {
             "name": "illuminate/view",
-            "version": "v5.6.21",
+            "version": "v5.6.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
