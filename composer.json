@@ -1,0 +1,6 @@
+{
+    "require": {
+        "rocket-code/shopify": "^2.0",
+        "illuminate/session": "^5.6"
+    }
+}
