@@ -12,3 +12,4 @@
 */
 
 $router->get('/', 'ShopifyController@checkUrl');
+$router->get('oauth', 'ShopifyController@oAuth');
