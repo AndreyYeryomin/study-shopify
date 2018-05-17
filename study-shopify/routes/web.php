@@ -22,4 +22,4 @@ $router->get('page/all', 'PagesController@getPagesList');
 $router->get('theme/all', 'ThemesController@getThemesList');
 $router->get('blog/all', 'BlogsController@getBlogsList');
 $router->get('blog/{id}/article', 'ArticlesController@getArticlesList');
-$router->get('page/all', 'PagesController@getPagesList');
+$router->get('product/collect', 'ProductsController@getProductCollection');
