@@ -8,7 +8,12 @@
         "php": ">=7.1.3",
         "laravel/lumen-framework": "5.6.*",
         "vlucas/phpdotenv": "~2.2",
-        "tymon/jwt-auth": "^0.5.12"
+        "tymon/jwt-auth": "^0.5.12",
+        "oseintow/laravel-shopify": "^1.0",
+        "dan/shopify-api": "v0.9.9.*",
+        "luketowers/php-shopify-api": "dev-master",
+        "slince/shopify-api-php": "*@beta",
+        "firebase/php-jwt": "^5.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -13,13 +13,18 @@
 
 $router->get('/', 'ShopifyController@checkUrl');
 $router->get('install', 'ShopifyController@install');
+
+
 $router->get('product/all', 'ProductsController@getProductsList');
-$router->get('product/{id}', 'ProductsController@getProductInfo');
-$router->delete('product/{id}', 'ProductsController@postProduct');
-$router->put('product/{id}', 'ProductsController@productUpdate');
+
+$router->get('product/{id:[0-9]+}', 'ProductsController@getProductInfo');
+$router->get('product/{id:[0-9]+}/collect', 'ProductsController@getProductCollection');
+$router->delete('product/{id:[0-9]+}', 'ProductsController@deleteProduct');
+$router->put('product/{id:[0-9]+}', 'ProductsController@productUpdate');
 $router->post('product/create', 'ProductsController@postProduct');
 $router->get('page/all', 'PagesController@getPagesList');
 $router->get('theme/all', 'ThemesController@getThemesList');
+$router->get('theme/{id:[0-9]+}/file/', 'ThemesController@getThemesFile');
 $router->get('blog/all', 'BlogsController@getBlogsList');
-$router->get('blog/{id}/article', 'ArticlesController@getArticlesList');
-$router->get('product/collect', 'ProductsController@getProductCollection');
+$router->get('blog/{id:[0-9]+}/article', 'ArticlesController@getArticlesList');
+

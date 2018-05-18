@@ -2,50 +2,54 @@
 
 namespace App\Http\Controllers;
 
+use Firebase\JWT\JWT;
 use Illuminate\Http\Request;
 use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\DB;
-
 class ShopifyController extends BaseController
 {
     public $api_key;
     public $secret_key;
     public $redirect_url;
     public $shop;
+    public $scope;
+    public $app_name;
     function __construct()
     {
         $this->api_key = env('API_KEY');
         $this->secret_key = env('SECRET_KEY');
         $this->redirect_url = env('REDIRECT_URL');
+        $this->scope = 'write_orders,read_customers,read_content,write_content,read_themes,write_themes,read_products, write_products,read_product_listings,read_customers, write_customers,read_orders, write_orders,read_draft_orders, write_draft_orders,read_inventory, write_inventory,read_locations,read_script_tags, write_script_tags,read_fulfillments, write_fulfillments,read_shipping, write_shipping,read_analytics';
+        $this->app_name = env('APP_NAME');
 
 
     }
     public function checkUrl(Request $request)
     {
         if(count($request->query()) > 0 ){
-            if($request->query('hmac') && $request->query('shop')){
+            if($request->query('hmac')){
                 $arr = $request->query();
-                    $hmac = $request->query('hmac');
-                    $this->shop = $request->query('shop');
-                    $timestamp = $request->query('timestamp');
-                    unset( $arr['hmac']);
-                    $message = http_build_query($arr);
-                    $message = urldecode($message);
-                    if(hash_hmac('sha256', $message, $this->secret_key) == $hmac) {
-                        if(count(DB::table('shopify')->get()->where('name_shop','=',$this->shop))>0){
-                            $jwt_token = $this->getJWT();
-                           return view('index')->with('token',$jwt_token);
-                        }else{
-                            $scope = 'write_orders,read_customers,read_content,write_content,read_themes,write_themes,read_products, write_products,read_product_listings,read_customers, write_customers,read_orders, write_orders,read_draft_orders, write_draft_orders,read_inventory, write_inventory,read_locations,read_script_tags, write_script_tags,read_fulfillments, write_fulfillments,read_shipping, write_shipping,read_analytics';
-                            header("Location: https://{$this->shop}/admin/oauth/authorize?client_id={$this->api_key}&amp;scope={$scope}&amp;redirect_uri={$this->redirect_url}");
-                            die();
-                        }
-
+                $hmac = $request->query('hmac');
+                $this->shop = $request->query('shop');
+                $timestamp = $request->query('timestamp');
+                unset( $arr['hmac']);
+                $message = http_build_query($arr);
+                $message = urldecode($message);
+                if(hash_hmac('sha256', $message, $this->secret_key) == $hmac) {
+                    if(count(DB::table('shopify')->get()->where('name_shop','=',$this->shop))>0){
+                        $jwt_token = $this->getJWT();
+                       return view('index')->with('token',$jwt_token);
                     }else{
-                        header("Location: https://apps.shopify.com");
+                        header("Location: https://{$this->shop}/admin/oauth/authorize?client_id={$this->api_key}&amp;scope={$this->scope}&amp;redirect_uri={$this->redirect_url}");
                         die();
+                        //return redirect("https://{$this->shop}/admin/oauth/authorize?client_id={$this->api_key}&amp;scope={$scope}&amp;redirect_uri={$this->redirect_url}");
                     }
 
+                }else{
+
+                    header("Location: https://apps.shopify.com");
+                    die();
+                }
             }
 
         }else{
@@ -54,18 +58,6 @@ class ShopifyController extends BaseController
         }
 
     }
-/*    public function requestVerify($hmac,$message,$shop){
-
-        if(hash_hmac('sha256', $message, $this->secret_key) == $hmac){
-            $scope = 'write_orders,read_customers,read_content,write_content,read_themes,write_themes,read_products, write_products,read_product_listings,read_customers, write_customers,read_orders, write_orders,read_draft_orders, write_draft_orders,read_inventory, write_inventory,read_locations,read_script_tags, write_script_tags,read_fulfillments, write_fulfillments,read_shipping, write_shipping,read_analytics';
-            header("Location: https://{$shop}/admin/oauth/authorize?client_id={$this->api_key}&amp;scope={$scope}&amp;redirect_uri={$this->redirect_url}");
-            die();
-        }else{
-            header("Location: https://apps.shopify.com");
-            die();
-        }
-
-    }*/
     public function install(Request $request){
             $hmac = $request->query('hmac');
             $code =$request->query('code');
@@ -103,19 +95,13 @@ class ShopifyController extends BaseController
     }
 
     public function getJWT(){
-        $token =DB::table('shopify')->where('name_shop','=',$this->shop)->value('access_token');
-        $header =  (object) [
-            "alg"=>"HS256",
-            "typ"=>"JWT"
-        ];
-        $header = json_encode($header);
-        $payload= (object)[
-            "access_token"=>$token
-        ];
-        $payload = json_encode($payload);
-        $unsigned_token = base64_encode($header) . base64_encode($payload);
-        $signature = hash_hmac('sha256', $unsigned_token, $this->secret_key);
-        $jwt = base64_encode($header).base64_encode($payload).base64_encode($signature);
-        return $jwt;
+        $token = array(
+            "iss" => $this->app_name,
+            "aud" => $this->shop,
+            "iat" => time(),
+            "exp" => time() + 14 * 24 *60 * 60
+        );
+        $token = JWT::encode($token, $this->secret_key);
+        return $token;
     }
 }
